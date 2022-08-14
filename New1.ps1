@@ -11,7 +11,7 @@ Move-Item -Path .\redFile*.txt -Destination .\red
 Move-Item -Path .\greenFile*.txt -Destination .\green
 Move-Item -Path .\blueFile*.txt -Destination .\blue
 Get-ChildItem -Path "C:\New Folder\red" -include *1.txt, *3.txt, *5.txt, *7.txt, *9.txt -Recurse | Remove-Item -Force
-Get-ChildItem -Recurse -Force -Filter "blue*" | Rename-Item -NewName { $_.Name -replace "blue","grey" }
-Get-ChildItem * -Include greenFile* -Recurse | Remove-Item -Include greenFile*
+Get-ChildItem -Path "C:\New Folder\" -Recurse -Force -Filter "blue*" | Rename-Item -NewName { $_.Name -replace "blue","grey" }
+Get-ChildItem -Path "C:\New Folder\green" -Include greenFile* -Recurse | Remove-Item -Include greenFile*
 
 
